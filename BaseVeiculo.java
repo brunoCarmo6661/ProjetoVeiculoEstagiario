@@ -9,8 +9,17 @@ public abstract class BaseVeiculo {
     protected String tipoVeiculo;
     protected String nomeProprietário;
     protected String estadoUF;
-    protected String cidadeUF;
+    protected String cidadeRegistro;
     protected int qtdeOcupantes;
+
+   public BaseVeiculo(String estadoUF){
+      if (estadoUF.length() == 2){
+      this.estadoUF= estadoUF;
+      }
+      else{
+         throw new IllegalArgumentException("Informar somente a sigla do estado");
+      }
+}
 
    public int getCodigo(){
       return codigo;
@@ -40,7 +49,7 @@ public abstract class BaseVeiculo {
       return nomeProprietário;
    }
    public String getCidadeUF(){
-      return cidadeUF;
+      return cidadeRegistro;
    }
    public String getEstadoUF(){
       return estadoUF;
@@ -49,7 +58,7 @@ public abstract class BaseVeiculo {
       return qtdeOcupantes;
    }
 
-   public BaseVeiculo( int codigo, String modelo, String marca, String cor, int anoModelo, int anoFabricacao, double potência, String tipoVeiculo, String nomeProprietário, String estadoUF,String cidadeUF,int qtdeOcupantes){
+   public BaseVeiculo( int codigo, String modelo, String marca, String cor, int anoModelo, int anoFabricacao, double potência, String tipoVeiculo, String nomeProprietário, String estadoUF,String cidadeRegistro,int qtdeOcupantes){
       this.codigo = codigo;
       this.modelo = modelo;
       this.marca = marca;
@@ -60,7 +69,7 @@ public abstract class BaseVeiculo {
       this.tipoVeiculo = tipoVeiculo;
       this.nomeProprietário = nomeProprietário;
       this.estadoUF = estadoUF;
-      this.cidadeUF = cidadeUF;
+      this.cidadeRegistro = cidadeRegistro;
       this.qtdeOcupantes = qtdeOcupantes;
    }
 }
