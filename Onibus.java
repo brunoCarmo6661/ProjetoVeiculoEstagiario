@@ -1,0 +1,11 @@
+public class Onibus extends Rodoviario {
+    private int assentos;
+public int getAssentos(){
+    return assentos;
+}
+public Onibus (int codigo, String modelo, String marca, String cor, int anoModelo, int anoFabricacao, double potência, String tipoVeiculo, String nomeProprietário, String  estadoUF, String cidadeUF, int qtdeOcupantes,String placa, double pesoLiquido, double pesoTotal, String tipoCombustível, String codigoRenavam, String chassi, int assentos){
+    super(codigo, modelo, marca, cor, anoModelo, anoFabricacao, potência, tipoVeiculo, nomeProprietário, estadoUF, cidadeUF, qtdeOcupantes, placa, pesoLiquido, pesoTotal, tipoCombustível, codigoRenavam, chassi);
+
+this.assentos = assentos;
+}
+}
